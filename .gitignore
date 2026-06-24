@@ -1,0 +1,20 @@
+# Local profile / secrets — never commit your personal data
+config.json
+
+# Resumes and cover letters
+*.pdf
+*.docx
+resumes/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
