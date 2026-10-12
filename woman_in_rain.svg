@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <title>Woman in the rain</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0f26"/>
+      <stop offset="0.6" stop-color="#232f58"/>
+      <stop offset="1" stop-color="#44537f"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a2a3a"/>
+      <stop offset="0.6" stop-color="#a8384d"/>
+      <stop offset="1" stop-color="#5e1e29"/>
+    </linearGradient>
+    <linearGradient id="umbrella" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6f8f"/>
+      <stop offset="1" stop-color="#163548"/>
+    </linearGradient>
+    <linearGradient id="puddle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2748" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#1c2748" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+    <pattern id="rain" width="90" height="140" patternUnits="userSpaceOnUse" patternTransform="rotate(12)">
+      <g stroke="#cfe0f7" stroke-linecap="round" fill="none" opacity="0.5">
+        <line x1="10" y1="0" x2="10" y2="34"/>
+        <line x1="48" y1="50" x2="48" y2="90"/>
+        <line x1="76" y1="20" x2="76" y2="48"/>
+        <line x1="28" y1="90" x2="28" y2="125"/>
+        <line x1="62" y1="100" x2="62" y2="132"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="1000" fill="url(#sky)"/>
+
+  <!-- distant buildings -->
+  <g fill="#10152f">
+    <rect x="0" y="420" width="90" height="380"/>
+    <rect x="80" y="330" width="70" height="470"/>
+    <rect x="150" y="470" width="110" height="330"/>
+    <rect x="560" y="390" width="80" height="410"/>
+    <rect x="630" y="300" width="90" height="500"/>
+    <rect x="710" y="440" width="90" height="360"/>
+  </g>
+  <g fill="#ffd98a" opacity="0.5">
+    <rect x="100" y="360" width="8" height="10"/>
+    <rect x="120" y="410" width="8" height="10"/>
+    <rect x="650" y="340" width="8" height="10"/>
+    <rect x="680" y="430" width="8" height="10"/>
+    <rect x="20" y="470" width="8" height="10"/>
+    <rect x="730" y="500" width="8" height="10"/>
+  </g>
+
+  <!-- streetlight glow -->
+  <g filter="url(#soft)">
+    <circle cx="150" cy="650" r="34" fill="#ffb347" opacity="0.4"/>
+    <circle cx="650" cy="660" r="30" fill="#7fd1ff" opacity="0.35"/>
+  </g>
+
+  <!-- wet street -->
+  <rect x="0" y="800" width="800" height="200" fill="#0c1024"/>
+  <rect x="0" y="800" width="800" height="90" fill="url(#puddle)"/>
+
+  <!-- woman silhouette, back view, walking under umbrella -->
+  <g>
+    <!-- coat / body -->
+    <path d="M355 470 Q335 610 325 760 Q405 785 490 760 Q475 610 460 470 Q408 452 355 470 Z" fill="url(#coat)"/>
+    <!-- belt -->
+    <path d="M340 610 Q405 632 475 610" stroke="#3a0f18" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- legs / boots -->
+    <path d="M380 758 L376 880 L358 892 L398 898 L400 758 Z" fill="#11111c"/>
+    <path d="M420 758 L426 880 L448 892 L410 899 L408 758 Z" fill="#11111c"/>
+    <ellipse cx="376" cy="896" rx="30" ry="8" fill="#08080f"/>
+    <ellipse cx="432" cy="897" rx="30" ry="8" fill="#08080f"/>
+    <!-- head + hair -->
+    <ellipse cx="405" cy="420" rx="30" ry="36" fill="#1a1218"/>
+    <path d="M378 428 Q372 500 386 540 Q398 548 396 505 L400 430 Z" fill="#1a1218"/>
+    <path d="M432 428 Q440 495 428 535 Q416 545 416 500 L412 430 Z" fill="#1a1218"/>
+    <!-- arm raised holding umbrella handle -->
+    <path d="M440 480 Q470 500 468 540" stroke="#8a2d40" stroke-width="20" fill="none" stroke-linecap="round"/>
+    <circle cx="466" cy="548" r="10" fill="#d9a587"/>
+    <!-- other arm at side -->
+    <path d="M365 480 Q345 540 362 590" stroke="#7a2a3a" stroke-width="18" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- umbrella canopy over her -->
+  <g>
+    <path d="M250 400 Q260 280 405 265 Q550 280 560 400 Q525 378 495 400 Q465 378 435 400 Q405 378 375 400 Q345 378 315 400 Q285 378 250 400 Z" fill="url(#umbrella)"/>
+    <path d="M250 400 Q260 280 405 265 Q550 280 560 400" fill="none" stroke="#0e2432" stroke-width="3" opacity="0.6"/>
+    <line x1="405" y1="265" x2="405" y2="245" stroke="#0e2432" stroke-width="4"/>
+    <circle cx="405" cy="243" r="4" fill="#0e2432"/>
+    <!-- shaft down to hand -->
+    <line x1="405" y1="265" x2="466" y2="540" stroke="#0e2432" stroke-width="4"/>
+  </g>
+
+  <!-- reflection in wet pavement -->
+  <g transform="translate(0,1600) scale(1,-1)" opacity="0.18">
+    <path d="M355 470 Q335 610 325 760 Q405 785 490 760 Q475 610 460 470 Q408 452 355 470 Z" fill="#a8384d"/>
+    <ellipse cx="405" cy="420" rx="30" ry="36" fill="#1a1218"/>
+    <path d="M250 400 Q260 280 405 265 Q550 280 560 400 Q525 378 495 400 Q465 378 435 400 Q405 378 375 400 Q345 378 315 400 Q285 378 250 400 Z" fill="#2f6f8f"/>
+  </g>
+
+  <!-- falling rain over everything -->
+  <rect width="800" height="1000" fill="url(#rain)"/>
+
+  <!-- vignette -->
+  <rect width="800" height="1000" fill="black" opacity="0.08"/>
+</svg>
